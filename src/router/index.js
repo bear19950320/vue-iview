@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld';
+import Index from '@/pages/index';
 import MainLogin from '@/pages/login';
 import RecordEntry from '@/pages/recordEntry';
 
@@ -10,8 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'MainLogin',
-      component: MainLogin,
+      name: 'Index',
+      component: Index,
       meta: {
         title: '登录志愿填报'
       },
