@@ -1,6 +1,10 @@
 <template>
     <div>
-        <router-view></router-view>
+        <keep-alive>
+            <router-view v-if="$route.meta.keepAlive"></router-view>
+        </keep-alive>
+        <router-view v-if="!$route.meta.keepAlive"></router-view>
+        <!-- <router-view></router-view> -->
     </div>
 </template>
 
@@ -16,7 +20,7 @@ export default {
 
   },
   mounted: function(){
-    this.$router.push('/login')
+    // console.log(this.$route.meta.keepAlive,'keepAlive-----');
   }
 };
 </script>

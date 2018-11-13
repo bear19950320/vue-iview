@@ -52,6 +52,7 @@ export default {
       this.$refs[formName].validate((valid) => {
         if (valid) {
           this.$message('登入填报成功');
+          sessionStorage.token = true;
           setTimeout(function(){
             _that.$router.push("/recordEntry");
           });
@@ -69,7 +70,7 @@ export default {
     }
   },
   mounted: function() {
-  
+    console.log(this.$router)
   }
 };
 </script>
