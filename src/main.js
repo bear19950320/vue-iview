@@ -5,6 +5,8 @@ import store from './store';
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import router from './router';
+import axios from 'axios'
+import Qs from 'qs';
 import {
   Pagination,
   Dialog,
@@ -139,6 +141,9 @@ Vue.use(Header);
 Vue.use(Aside);
 Vue.use(Main);
 Vue.use(Footer);
+
+Vue.prototype.axios = axios;
+Vue.prototype.qs = Qs;
 
 Vue.use(Loading.directive);
 // Vue.use(Element, { size: 'small', zIndex: 3000 });
